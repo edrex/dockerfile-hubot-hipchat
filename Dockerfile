@@ -1,4 +1,4 @@
-FROM goldeneggg/hubot
+FROM goldeneggg/hubot-scripts
 
 MAINTAINER goldeneggg
 
