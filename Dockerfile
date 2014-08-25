@@ -10,9 +10,10 @@ RUN npm install hubot-irc --save && npm install
 # HUBOT_IRC_SERVER and HUBOT_IRC_ROOMS must be indicated by `docker run -e ...`
 ENV HUBOT_IRC_NICK hubot
 ENV HUBOT_IRC_UNFLOOD true
-#ENV HUBOT_IRC_SERVER <YOUR_IRC_SERVER>
-#ENV HUBOT_IRC_ROOMS <YOUR_IRC_ROOM>
 
 # run hubot("-a irc")
+# HTTP Listener listen port 9980
+ENV PORT 9980
+EXPOSE 9980
 ENTRYPOINT ["bin/hubot", "-a", "irc"]
 CMD ["--name", "myhubot"]
