@@ -3,16 +3,18 @@
 ## Usage
 
 ### Pull
+If with your scripts, base container is [dockerfile-hubot-scripts/Dockerfile at master · goldeneggg/dockerfile-hubot-scripts](https://github.com/goldeneggg/dockerfile-hubot-scripts/blob/master/Dockerfile)
 
 ```bash
-$ docker pull goldeneggg/hubot-irc
+$ docker pull goldeneggg/hubot-irc:with-scripts
 ```
 
 #### Build
 If you would like to build on local, you should run the following `docker build` command.
 
 ```bash
-$ docker build -t goldeneggg/hubot-irc .
+$ cd <DOCKERFILE_DIR>
+$ docker build -t goldeneggg/hubot-irc:with-scripts .
 ```
 
 ### RUN
