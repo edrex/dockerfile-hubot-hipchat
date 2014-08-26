@@ -11,9 +11,12 @@ RUN npm install hubot-irc --save && npm install
 ENV HUBOT_IRC_NICK hubot
 ENV HUBOT_IRC_UNFLOOD true
 
-# run hubot("-a irc")
 # HTTP Listener listen port 9980
 ENV PORT 9980
 EXPOSE 9980
+
+# run redis-server and hubot("-a irc")
+EXPOSE 6379
+RUN /etc/init.d/redis-server start
 ENTRYPOINT ["bin/hubot", "-a", "irc"]
 CMD ["--name", "myhubot"]
