@@ -22,13 +22,13 @@ $ docker build -t goldeneggg/hubot-irc:with-scripts .
 * join to IRC (require 2 environment value `HUBOT_IRC_SERVER` and `HUBOT_IRC_ROOMS`)
 
 ```bash
-$ docker run -e HUBOT_IRC_SERVER=<YOUR_HUBOT_IRC_SERVER> -e HUBOT_IRC_ROOMS=<YOUR_HUBOT_IRC_ROOM> -p 9980:9980 -t -d goldeneggg/hubot-irc
+$ docker run -e HUBOT_IRC_SERVER=<YOUR_HUBOT_IRC_SERVER> -e HUBOT_IRC_ROOMS=<YOUR_HUBOT_IRC_ROOM> -e HUBOT_GITHUB_TOKEN=<YOUR_GITHUB_TOKEN> -p 9980:9980 -t -d goldeneggg/hubot-irc:with-scripts
 ```
 
 * with `--name` option
 
 ```bash
-$ docker run -e HUBOT_IRC_SERVER=<YOUR_HUBOT_IRC_SERVER> -e HUBOT_IRC_ROOMS=<YOUR_HUBOT_IRC_ROOM> -p 9980:9980 -t -d goldeneggg/hubot-irc --name hoge
+$ docker run -e HUBOT_IRC_SERVER=<YOUR_HUBOT_IRC_SERVER> -e HUBOT_IRC_ROOMS=<YOUR_HUBOT_IRC_ROOM> -e HUBOT_GITHUB_TOKEN=<YOUR_GITHUB_TOKEN> -p 9980:9980 -t -d goldeneggg/hubot-irc:with-scripts --name=hoge
 ```
 
 ### HTTP Listener
