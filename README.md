@@ -33,3 +33,6 @@ $ docker run -e HUBOT_IRC_SERVER=<YOUR_HUBOT_IRC_SERVER> -e HUBOT_IRC_ROOMS=<YOU
 
 * Since `PORT` environment is `9980` and exposed port `9980`, you can access HTTP listener
     * ex: `http://<HOST_MACHINE_IP (or HOSTNAME)>:9980/hubot/version` by GET method.
+
+## TODO
+* Can't connect local redis-server(localhost:6379)
